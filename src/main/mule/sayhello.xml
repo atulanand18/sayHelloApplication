@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="f80e7c9e-de8d-43cf-8dae-cc5933881b4d" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="sayhelloFlow" doc:id="df9cf7a1-798f-488e-94f1-747b18f7dd5d" >
+		<http:listener doc:name="Listener" doc:id="ed25cad8-1765-44eb-9364-c1d55359bd33" config-ref="HTTP_Listener_config" path="/hello"/>
+		<set-payload value="Hello to the Docker Demo" doc:name="Set Payload" doc:id="157cdcff-76ba-4447-b925-645fc4f49cb7" />
+	</flow>
+</mule>
