@@ -31,14 +31,7 @@
 		   </properties>
 		</profile>
 	</profiles>
-	
-	<servers>
-		<server>
-			  <id>https://anypoint.mulesoft.com</id>
-			  <username>atulanand</username>
-			  <password>Anand@18Atul</password>
-		</server>
-	</servers>
+
 
 	<build>
 		<plugins>
